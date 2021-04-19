@@ -1,3 +1,6 @@
+// console.log('hi');
+
+// Global constants and variables declaration
 const BASE_URL = "http://localhost:3000/";
 let curPage = 1;
 
@@ -5,10 +8,6 @@ let curPage = 1;
 getMonsters(curPage).then(showMonsters);
 createMonsterForm();
 addNavListeners();
-
-
-
-
 
 // OBJECTIVE 1
 // When the page loads, show the first 50 monsters. 
@@ -52,13 +51,13 @@ function createMonsterDiv(monsterObj) {
   return div;
 }
 
-/*const testMonsterObj = {
+const testMonsterObj = {
   "name": "Chronos",
   "age": 4005.302453418598,
   "description": "Effulgence eldritch shunned foetid. Ululate gibbering tenebrous foetid iridescence daemoniac. Stench nameless gambrel. Amorphous furtive iridescence noisome. Foetid mortal nameless.",
   "id": 1
 }
-*/ 
+
 // 3. Append the component to the DOM
 /*
 <div id='monster-container'>
@@ -83,7 +82,7 @@ function clearMonstersContainer() {
   document.querySelector("#monster-container").innerHTML = "";
 }
 
-/*const testMonstersArray = [
+const testMonstersArray = [
   {
     "name": "Chronos",
     "age": 4005.302453418598,
@@ -109,7 +108,7 @@ function clearMonstersContainer() {
     "id": 4
   }
 ]
-*/
+
 // showMonsters(testMonstersArray);
 
 // getMonsters(1).then(monstersArray => console.log(monstersArray));
@@ -183,8 +182,7 @@ function postMonster(monster) {
       },
       body: JSON.stringify(monster),
     };
-
-  fetch(URL, config);
+    fetch(URL, config);
 }
 
 function clearForm() {
